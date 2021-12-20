@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>floating button demo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style type="text/css">
+
+//ROUGE
+
+  i {
+  color: #fff;
+  font-size: 20px !important;
+  /* 24px preferred icon size */
+}
+
+a {
+  text-decoration: none;
+}
+
+#btn {
+  display: none;
+}
+
+.button-parent {
+  display: flex;
+  margin-left:200px;
+}
+
+.button {
+  
+  width: 300px;
+  height: 80px;
+  display: block;
+  margin: 100px;
+  cursor:pointer;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+
+/* link and link-parent */
+
+.link-parent {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+}
+
+.link-item {
+  background-color: white; 
+  display: block;
+  width: 400px;
+  height: 130px;
+  border-radius: 3px;
+  margin-right: 5px;
+  transform: translatey(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: move-up;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+/* control click */
+
+#btn:checked~.link-parent {
+  display: flex;
+  flex-direction:column;
+}
+
+
+/* animation */
+
+@keyframes move-up {
+  0% {
+    transform: translateY(5px);
+  }
+  33% {
+    transform: translateY(0px);
+  }
+  66% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#link-one {
+  animation-delay: .1s;
+  margin-left:-330px;
+  margin-top: 155px;
+  border: 1px solid gray;
+}
+.nom{
+   margin-left:20px;
+   margin-top: -50px;
+   position: absolute;
+}
+.profession
+{
+   margin-left:20px;
+   margin-top:-70px;
+   position: absolute;
+}
+.input
+{
+   margin-top:-50px;
+   padding: 8px;
+   width:280px;
+}
+.inputa
+{
+   margin-top: 30px;
+   padding: 8px;
+   width:280px;
+   position:absolute;
+   margin-left: 90px;
+   border: 1px solid gray;
+   border-radius: 3px;
+}
+.inpute
+{
+   margin-top:-120px;
+   padding: 8px;
+   width:250px;
+}
+.inputo
+{
+   width:280px;
+   border-radius: 3px;
+   border: none;
+	outline:none;
+	background:none;
+}
+.inputi
+{
+  margin-top: 75px;
+  margin-left:360px;
+}
+
+
+
+</style>
+</head>
+<body>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class='button-parent'>
+  <input type="checkbox" id='btn'>
+  <label for="btn" class='button'>
+        <i class="material-icons"><strong>Doungue stephane</strong><br>Architecte logiciel/DevOps</i>
+      </label>
+
+  <div class="link-parent">
+    <div class='link-item' id='link-one'>
+<div class="label-container">
+<div class="nom"><strong>Nom:</strong></div><div class="input"><input type="text" class="inputa"></div>
+<a href="Go" class="Go"><input type="submit" name="GO" value="GO" class="inputi"></a>
+<div class="profession"><strong>Profession:</strong></div><div class="inpute"><input type="text" class="inputo"></div>
+      <i class="material-icons"></i>
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
